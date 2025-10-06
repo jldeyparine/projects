@@ -1,3 +1,24 @@
+"""
+scraper.py
+A web scraping script for extracting product information from Amazon search results using Selenium and BeautifulSoup.
+Functions:
+-----------
+get_url(search_text):
+    Generate an Amazon search URL for the given search text, with a page query placeholder.
+extract_record(item):
+    Extracts product details (description, price, rating, review count, and URL) from a BeautifulSoup tag representing a single search result item.
+main(search_term):
+    Main routine to scrape multiple pages of Amazon search results for the given search term, extract product data, and save it to a CSV file.
+Usage:
+------
+Run the script directly to scrape Amazon for a specified search term (default: 'ultrawide monitor') and save results to 'results.csv'.
+Requirements:
+-------------
+- Selenium
+- BeautifulSoup (bs4)
+- Microsoft Edge WebDriver
+"""
+
 import csv
 from bs4 import BeautifulSoup
 from selenium import webdriver
